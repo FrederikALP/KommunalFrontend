@@ -6,13 +6,6 @@ let localPartiesSaved = [];
 let selectedPartyId;
 let partyToCandidate;
 
-fetch(baseurl + "/candidates/party/" + partyIdet)
-    .then(response => response.json())
-    .then(kandidater => {
-        console.log(kandidater)
-        kandidater.map(addPartyCandidatesToTableRow);
-    })
-
 fetch(baseurl + "/parties")
     .then(response => response.json())
     .then(parties => {
@@ -20,7 +13,15 @@ fetch(baseurl + "/parties")
             localPartiesSaved.push(localParties);
         })
         console.log(localPartiesSaved)
+        fetch(baseurl + "/candidates/party/" + partyIdet)
+            .then(response => response.json())
+            .then(kandidater => {
+                console.log(kandidater)
+                kandidater.map(addPartyCandidatesToTableRow);
+            })
     });
+
+
 
 function addPartyCandidatesToTableRow(candidate){
     const selectPartyCandidatesToDiv = document.createElement("div");
