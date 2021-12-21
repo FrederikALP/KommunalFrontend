@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="./partiesCandidates.css">
+    <script src="../lib/HTMLEscape.js"></script>
+    <script src="../global.js"></script>
+    <title>Specific Party Candidates</title>
+</head>
+<body>
+<nav class="menu">
+    <ul>
+        <li><a href="../frontpage/index.html">Home</a></li>
+        <li><a href="../candidates/candidates.html">See All Candidates</a></li>
+        <li><a href="../parties/parties.html">See Parties</a></li>
+        <li><a href="../voted/voted.html">See Final Votes</a></li>
+    </ul>
+</nav>
+
+<div id="party-candidates-wrapper">
+
+</div>
+
+<div id="candidate-table">
+    <input id="new-candidate-name" type="String">
+    <button id="create-new-candidate-button">Add new Candidate</button>
+    <table>
+        <tbody id="party-candidates-table-tbody">
+        </tbody>
+    </table>
+
+</div>
+
+<script src="./partiesCandidates.js"></script>
+<script src="./partiesCandidatesAdd.js"></script>
+<script src="./partiesCandidatesDelete.js"></script>
+<script src="./partiesCandidatesUpdate.js"></script>
+</body>
+</html>
